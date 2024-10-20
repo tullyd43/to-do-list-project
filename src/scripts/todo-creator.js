@@ -9,7 +9,8 @@ export const toDo = function() {
 			dueDate,
 			priority,
 			notes,
-			checklist,
+            checklist,
+            subtasks,
 			ID = TaskGen.createID()
 		) {
 			this.title = title;
@@ -17,7 +18,8 @@ export const toDo = function() {
 			this.dueDate = dueDate;
 			this.priority = priority;
 			this.notes = notes;
-			this.checklist = checklist;
+            this.checklist = checklist;
+            this.subtasks = subtasks
 			this.ID = ID;
 		}
 	};

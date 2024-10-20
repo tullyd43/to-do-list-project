@@ -4,6 +4,6 @@ import { toDo } from "./todo-creator.js";
 
 const test = new toDo.TaskGen("test", "test", "test")
 toDo.toDoList.push(test)
-test.editTitle("redoTest")
+// test.editTitle("redoTest")
 console.log(test)
-console.log(toDo.toDoList)
+// console.log(toDo.toDoList)
