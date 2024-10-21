@@ -1,26 +1,26 @@
-const projects = (function () {
-	class Project {
-		constructor(title, description, tasks) {
+export const TaskGroups = (function () {
+    const projects = [];
+	class TaskGroup {
+		constructor(
+			title,
+			description,
+			tasks = TaskGroups.TaskGroup.createTaskList()
+		) {
 			this.title = title;
-			this.descriptions = description;
+			this.description = description;
 			this.tasks = tasks;
 		}
-    }
-    Project.defaultList = function () {
-        return this.tasks = []
-    }
-	Project.prototype.createTaskList = function (tasks) {
-		return (this.tasks = []);
+	}
+	TaskGroup.createTaskList = function () {
+		return [];
 	};
-	const defaultProject = new Project(
-		"General",
-        "The 'General' project is a default space for tasks that don't fit into a specific project. Use it to quickly capture and manage your everyday to-dos.",
-        tasks = Project.defaultList()
-    );
-    return {
-        Project,
-        defaultProject,
-    }
+	return {
+		TaskGroup,
+	};
 })();
 
-console.log(projects.defaultProject);
+export const defaultGroup = (function () {
+	const defaultTaskGroup = new TaskGroups.TaskGroup("test1", "test1");
+    return defaultTaskGroup
+    
+})();
